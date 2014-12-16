@@ -29,3 +29,8 @@ body, a:link, a:visited, a:active{
   border:13px solid blue;
   border-radius:10px;
 }
+.carlton{
+  border:13px solid yellow;
+  background-image: url('images/carlton.gif');
+  background-size: 100px 60px;
+}
