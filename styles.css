@@ -37,3 +37,13 @@ body, a:link, a:visited, a:active{
 .carlton{
   border:none;
 }
+.dancer:hover {
+  border: solid 5px blue;
+  /*transform: rotate(360deg);
+  transform-origin: top left;*/
+}
+.neighbor{
+  border: solid 15px orange;
+  /*transform: rotate(360deg);*/
+  /*transform-origin: top left;*/
+}
