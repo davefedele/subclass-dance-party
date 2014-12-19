@@ -16,19 +16,19 @@ $(document).ready(function(){
      * to the stage.
      */
     var dancerMakerFunctionName = $(this).data("dancer-maker-function-name");
-    console.log(dancerMakerFunctionName, "dancer fn name");
+    // console.log(dancerMakerFunctionName, "dancer fn name");
 
     // get the maker function for the kind of dancer we're supposed to make
     var dancerMakerFunction = window[dancerMakerFunctionName];
 
     // make a dancer with a random position
-    console.log(dancerMakerFunction);
+    // console.log(dancerMakerFunction);
     var dancer = new dancerMakerFunction(
       $("body").height() * Math.random(),
       $("body").width() * Math.random(),
       Math.random() * 1000
     );
-    console.log('after');
+    // console.log('after');
     $('body').append(dancer.$node);
     window.dancers.push(dancer);
   });
@@ -37,7 +37,7 @@ $(document).ready(function(){
       var count = 1;
       window.dancers.forEach(function(dancer){
         dancer.lineup(25,(50 * count * 3));
-        console.log("lining up", dancer);
+        // console.log("lining up", dancer);
         count++;
       });
     });
@@ -56,12 +56,12 @@ $(document).ready(function(){
         var x1 = $(that).position().left;
         var neighborDistance = Math.sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1));
         distance[neighborDistance] = dancer;
-        console.log(distance);
+        // console.log(distance);
         // console.log('the target:  ', $(this).position());
-        console.log(dancer.$node.position());
+        // console.log(dancer.$node.position());
       });
       for (var key in distance) {
-        if(key < 250){
+        if(key < 250 && key > 1){
           distance[key].$node.addClass('neighbor');
         }
       }

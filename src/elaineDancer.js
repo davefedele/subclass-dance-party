@@ -16,7 +16,8 @@ makeElaineDancer.prototype.step = function(){
   // other effects you can use on a jQuery-wrapped html tag.
   this.$node.addClass('elaine'); //dh: this is blinkyDancers dance step
   var distance = this.$node.position(); //{top:value, left : value}
-  this.$node.animate({left: Math.abs((distance.left - 200) * Math.random()), top: distance.top + 300 * Math.random() }, 600);
+  this.$node.fadeIn();
+  //this.$node.animate({left: Math.abs((distance.left - 200) * Math.random()), top: distance.top + 300 * Math.random() }, 600);
 };
 
 // Returns a random number between min (inclusive) and max (exclusive)
